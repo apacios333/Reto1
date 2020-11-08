@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reto 1 Curso Frontend: Sitio Web HTML en base a hojas CSS">
+    <!-- estilo css -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- icono en la pestaña -->
+    <link href="icon/icono.gif" type="image/x-icon" rel="shortcut icon">
+    <title>Sitio Web Home - Reto 1 -</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Encabezado-->
+        <div class="icono"></div>
+        <h1>FANTASTIC COMMUNITIES</h1>
+
+        <!--Barra de Navegación en menú desplegado-->
+        <nav class="menu">
+            <ul>
+                <li><a>Menú</a>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Barra de Navegación en línea cuando la pantalla es grande-->
+        <nav>
+            <!-- Lista Menú -->
+            <ul class="listamenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contenido Principal-->
+
+        <article>
+            <section class="titulo">
+                <h1>Da rienda a tu imaginación, y entre todos contemos ¡nuestra HISTORIA!</h1>
+            </section>
+            <section>
+                <h1> ¡Forma parte de nuestra comunidad!</h1>
+                <p>Ayuda con tus habilidades especiales a escribir la mayor leyenda jamás contada.</p>
+                <p>Y haz que seamos un sociedad cada vez más grandes y con ideas creativas</p>
+            </section>
+            <section class="instrucciones">
+                <h1>¿Cómo comenzar a escribir?</h1>
+                <ol>
+                    <li>Añade tu <a href="perfil.html">perfil</a> a <strong>FANTASTIC COMMUNITIES</strong></li>
+                    <li>Rellena toda tu ficha indicando en qué destacas</li>
+                    <li>Saca tu ingenio, e incluye en el apartado "sigue el hilo" tu parte de la historia ;)</li>
+                </ol>
+            </section>
+        </article>
+
+        <aside>
+            <!-- Barra Lateral-->
+            <h1>Sigue el hilo...</h1>
+            <p class="texto">
+                << Pasan los años y las épocas,<br>
+                    pero el interés por esta leyenda crece.<br> Ni si quiera el rechazo o el miedo<br> pueden silenciar las aventuras de...>>
+            </p>
+
+            <form>
+                <div class="form-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario">
+                </div>
+
+                <div class="form-textarea">
+                    <textarea name="descripcion" rows="3" cols="35" placeholder="Introduce aquí tu texto"></textarea>
+                </div>
+
+
+                <button type="button">Enviar</button>
+            </form>
+
+            <p>Web desarrollada para la libre creación literaria</p>
+            <p><a href="contacto.html">Contacto</a></p>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- Pie de Página-->
+        <p>- Bootcamp Frontend de
+            <a href="https://geekshubsacademy.com/" title="Academia de formación para desarrolladores con bloques formativos online y presenciales">GeeksHubs
+                Academy</a> . Reto 1 : Sitio Web Dinámico, by Alicia -
+        </p>
+    </footer>
+
+</body>
+
+</html>

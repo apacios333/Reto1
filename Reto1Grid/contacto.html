@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reto 1 Curso Frontend: Sitio Web HTML en base a hojas CSS">
+    <!-- estilo css -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <!-- icono en la pestaña -->
+    <link href="icon/icono.gif" type="image/x-icon" rel="shortcut icon">
+    <title>Sitio Web Contacto - Reto 1 -</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- Encabezado-->
+        <div class="icono"></div>
+        <h1>FANTASTIC COMMUNITIES</h1>
+
+        <!--Barra de Navegación en menú desplegado-->
+        <nav class="menu">
+            <ul>
+                <li><a>Menú</a>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Barra de Navegación en línea cuando la pantalla es grande-->
+        <nav>
+            <!-- Lista Menú -->
+            <ul class="listamenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <article>
+            <h1>Contacta con nosotros:</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="surname">Apellidos:</label>
+                    <input type="text" id="surname" name="surname">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+
+                <div class="form-textarea">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" rows="6" cols="50" placeholder="Escribe tu mensaje"></textarea>
+                </div>
+
+                <button type="button">Enviar</button>
+            </form>
+
+            <address>
+                <p>by <a href="me@gmail.com">Email de contacto</a>, de la Academia <a
+                        href="https://geekshubsacademy.com">GeeksHubs Academy</a>
+                </p>
+            </address>
+
+        </article>
+
+        <aside>
+            <h1>CONTACTO</h1>
+            <address>
+                <p>
+                    Alicia de GeeksHubs Academy<br>
+                    Madrid<br>
+                    SPAIN<br>
+                </p>
+
+                <ul class="listacontacto">
+                    <li>Tel: 0034 915 923 890</li>
+                    <li>Email:<a href="me@gmail.com">me@gmail.com</a> </li>
+                </ul>
+            </address>
+            <p>Alicia de GeeksHubs Academy, Madrid, SPAIN</p>
+        </aside>
+    </main>
+
+    <footer>
+        <!-- Pie de Página-->
+        <p>- Bootcamp Frontend de
+            <a href="https://geekshubsacademy.com/" title="Academia de formación para desarrolladores con bloques formativos online y presenciales">GeeksHubs
+                Academy</a> . Reto 1 : Sitio Web Dinámico, by Alicia -
+        </p>
+    </footer>
+
+</body>
+
+</html>

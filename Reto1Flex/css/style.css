@@ -1,0 +1,276 @@
+body {
+    min-height: 100vh;
+    /*minimo ocupa toda la ventana en altura. Principal para que footer esté abajo*/
+    background-color: lightgrey;
+    font: italic bold 1rem 'Franklin Gothic Medium';
+    /*tamaño fuente rem, respecto a la raíz html, por defecto 1rem=16px*/
+    color: rgb(36, 36, 71);
+    display: flex;
+    flex-direction: column;
+    /*sus items se alinean en columna*/
+}
+
+
+/*HEADER----------------------------------------------*/
+
+header {
+    background-color: lightblue;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
+    order: 0;
+    /*Header ejerciendo como padre para sus 3 hijos:*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icono {
+    width: 30px;
+    height: 30px;
+    background-image: url(../icon/icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.3rem;
+}
+
+header>h1 {
+    font-size: 2.5em;
+    /*tamaño fuente em, respecto al body (padre)*/
+    padding-left: 0.5em;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex: 1;
+    /*ocupa lo máximo del espacio disponible "empujando" a los otros a los extremos*/
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+    /*desaparece la línea del link*/
+}
+
+
+/*menu cuando la pantalla es pequeña, en forma de menú desplegable. No se muestra el menú desplegable hasta que el ratón pasa por encima*/
+
+.menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: rgb(36, 36, 71);
+    color: white;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: grey;
+}
+
+.menu ul li ul {
+    display: none;
+}
+
+.menu ul li a:hover+ul,
+.menu ul li ul:hover {
+    display: block;
+}
+
+
+/*menú cuando la pantalla es grande. Ahora no se muestra. Ver mediaquerie*/
+
+.listamenu {
+    display: none;
+}
+
+
+/*MAIN----------------------------------------------*/
+
+main {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    /*ocupa lo máximo, empujando header y footer a los extremos (para ello body debe ocupar el máximo de la ventana)*/
+}
+
+article,
+aside {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5em;
+}
+
+
+/*Article---*/
+
+article {
+    margin: 1em;
+    order: 1;
+    flex: 1 1 auto;
+    /*ocupa todo lo ancho del main, "empujando" a aside hacia abajo*/
+}
+
+.titulo>h1 {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.instrucciones ol {
+    text-align: justify;
+}
+
+strong {
+    color: rgb(36, 36, 71);
+    font-style: italic;
+}
+
+
+/* Estilo a formularios */
+
+
+/*----------------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    margin: 0.3em;
+}
+
+.form-textarea {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+}
+
+label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+}
+
+input {
+    flex: 2;
+}
+
+input,
+textarea,
+button {
+    border: 0.1em solid white;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    font: normal 1rem 'Franklin Gothic Medium';
+}
+
+textarea {
+    resize: vertical;
+    /*usuario cambia el tamaño del elemento textarea*/
+}
+
+button {
+    border: 0.1em solid lightseagreen;
+    margin-top: 1em;
+    align-self: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+    border: 0.3em solid rgb(137, 204, 226);
+    outline: 0 none;
+    /*eliminamos el contorno negro*/
+}
+
+.form-person {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.form-person label {
+    margin-right: 1em;
+}
+
+
+/*----------------------*/
+
+
+/*Aside---*/
+
+aside {
+    margin: 1em;
+    background-color: lightblue;
+    border-radius: 1em;
+    order: 2;
+}
+
+.texto {
+    background-color: lightgrey;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.listacontacto {
+    list-style: none;
+}
+
+
+/*FOOTER----------------------------------------------*/
+
+footer {
+    background-color: rgb(36, 36, 71);
+    color: white;
+    order: 3;
+    display: flex;
+    /*ejerce de padre para sus items*/
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/*MEDIA----------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+    .menu {
+        display: none;
+        /*botón menú no se muestra*/
+    }
+    .listamenu {
+        display: flex;
+        flex-direction: row;
+    }
+    .listamenu li {
+        list-style-type: none;
+        /*quitamos los puntos de la lista*/
+        font-size: 1em;
+        color: lightgray;
+        margin-left: 1em;
+    }
+    .listamenu a:hover {
+        color: red;
+        text-decoration: none;
+    }
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+}
